@@ -17,6 +17,7 @@ pub fn build(b: *std.build.Builder) void {
 
     exe.linkLibC();
     exe.linkSystemLibrary("X11");
+    exe.linkSystemLibrary("Xtst");
     exe.addIncludePath("/usr/include/X11");
     exe.addPackagePath("zig_serial", "deps/serial.zig");
     exe.install();
